@@ -28,7 +28,22 @@ HTTPプロキシはJAVA_OPTSに設定し、
 
 
 
-### 各種疑問
+
+#### ファイルのコピー
+
+    compileJava {
+        println "fromはファイル指定できるが、intoはフォルダ指定"
+        
+        copy {
+            from "$projectDir/src/main/resources/some.txt"
+            into "$projectDir"
+        }
+    }
+
+
+
+
+## 各種疑問
 
 - gradle tasksで表示されるタスクの一覧にないcompileJavaのようなタスクが実行できるのはなぜ？
 
